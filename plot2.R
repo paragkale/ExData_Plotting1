@@ -33,7 +33,8 @@ if (!file.exists(filename)) {
     # read just the first row to get the column names
     first_row <- read.csv(filename, 
                           header = TRUE, 
-                          sep=";", 
+                          sep=";",
+                          na.strings = "?",
                           stringsAsFactors=FALSE,
                           nrows = 1)
     
@@ -41,7 +42,8 @@ if (!file.exists(filename)) {
     # 1-Feb-2007 and 2-Feb-2007
     dat <- read.csv(filename,
                     header = FALSE,
-                    sep=";", 
+                    sep=";",
+                    na.strings = "?",
                     stringsAsFactors=FALSE,
                     nrows = 2880,
                     skip = 66637)

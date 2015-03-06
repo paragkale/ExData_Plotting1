@@ -33,6 +33,7 @@ if (!file.exists(filename)) {
     first_row <- read.csv(filename, 
                           header = TRUE, 
                           sep=";", 
+                          na.strings = "?",
                           stringsAsFactors=FALSE,
                           nrows = 1)
     
@@ -41,6 +42,7 @@ if (!file.exists(filename)) {
     dat <- read.csv(filename,
                     header = FALSE,
                     sep=";", 
+                    na.strings = "?",
                     stringsAsFactors=FALSE,
                     nrows = 2880,
                     skip = 66637)
